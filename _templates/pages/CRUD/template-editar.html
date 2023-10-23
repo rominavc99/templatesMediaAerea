@@ -1,0 +1,141 @@
+{% extends layout %} {% load i18n %} {% block title %}{% translate "Editar"%}
+
+
+{% endblock %}
+
+
+
+{% block content %}
+    <!-- CONTENT -->
+    
+   
+
+
+ <!-- MAIN -->
+    <body class="container-fluid" > 
+        <div class="mainContent container-fluid m-3 " style="box-shadow: 2px;">
+            <div class="row container-fluid" style="overflow: hidden;">
+                <header class="py-3 mb-4">
+                    <div class="container-fluid d-flex flex-wrap">
+                    <a href="#" type="button" class="btn btn-sm btn-secondary mb-3" style="border-radius: 20px;"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                            </svg>&nbsp; &nbsp; Volver &nbsp;&nbsp;</a>
+                    </div>
+                    <div class="container-fluid d-flex flex-wrap justify-content-center">
+                        <a class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto link-body-emphasis text-decoration-none">
+                            <span class="fs-5">Editar</span>
+                         </a> 
+                    </div>
+                    <div class="container-fluid d-flex flex-wrap">
+                         <h5> Los campos que tengan el <span style="color: red;">*</span> tendran que ser llenados obligatoriamente. </h5>
+                    </div>
+                </header>
+            </div>
+        
+        <div class="table-data">
+
+            <div class="row container-fluid" style="background-color: var(--bg-color-body);">
+                
+                <div class="col-8 d-flex justify-content-between">
+               
+            </div>
+
+        
+
+            <div class="d-inline-flex flex-row-reverse col-4">
+                <a href="#" id="botonGuardar" type="button" class="btn-green m-1">Guardar</a>
+                <a href="#"  class="btn-grey m-1" > Cancelar </a> 
+                
+            </div>
+
+
+    
+   
+    
+        <!-- CREAR -->
+        <div class="table-data-1 container-fluid" >
+            <div class="container max-width-50 col-6 p-4 pt-5" style="box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)">
+                <!-- Primera fila: Clave de Pedimento y Tipo de Operación -->
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="clave" class="form-label">Clave<span style="color: red;">*</span></label>
+                        <input type="text" class="form-control" id="clave">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="seccion" class="form-label">Sección<span style="color: red;">*</span></label>
+                        <input type="text" class="form-control" id="seccion">
+                    </div>
+                </div>
+        
+                <!-- Segunda fila: Fecha de Inicio y Fecha Fin -->
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="fechaInicio" class="form-label">Fecha de Inicio<span style="color: red;">*</span></label>
+                        <div class="input-group date custom-outline" data-provide="datepicker">
+                            <input type="text" class="form-control" placeholder="mm/dd/yyyy">
+                            <button class="btn " type="button" id="calendar-button">
+                                <i class="bi bi-calendar"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="fechaFin" class="form-label">Fecha Fin</label>
+                        <div class="input-group date custom-outline" data-provide="datepicker">
+                            <input type="text" class="form-control" placeholder="mm/dd/yyyy">
+                            <button class="btn " type="button" id="calendar-button">
+                                <i class="bi bi-calendar"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Tercera fila: Denominación -->
+                <div class="row mb-3">
+                    <div class="col-md-12">
+                        <label for="denominacion" class="form-label">Denominación<span style="color: red;">*</span></label>
+                        <textarea class="form-control" id="denominacion" rows="4"></textarea>
+                    </div>
+                </div>
+        
+                <!-- Cuarta fila: Estado -->
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="estado" class="form-label">Estado<span style="color: red;">*</span></label>
+                        <select class="form-select" id="estado">
+                            <option selected>---</option>
+                            <option value="activo">Activo</option>
+                            <option value="inactivo">Inactivo</option>
+                            <!-- Agrega más opciones aquí -->
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+     
+
+        
+</body>
+
+   
+
+
+</html>
+
+    
+    <!-- MAIN -->
+
+ <!-- MODAL ERROR -->
+
+
+
+    
+    <!-- CONTENT -->
+{% endblock %}
+
+{% block js %}
+
+{% endblock  %}
