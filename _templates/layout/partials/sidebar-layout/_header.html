@@ -1,26 +1,42 @@
 <!--begin::Header-->
-<div id="kt_app_header" class="app-header" data-kt-sticky="true" data-kt-sticky-activate="{default: true, lg: true}" data-kt-sticky-name="app-header-minimize" data-kt-sticky-offset="{default: '200px', lg: '0'}" data-kt-sticky-animation="false">
-	<!--begin::Header container-->
-	<div class="app-container container-fluid d-flex align-items-stretch justify-content-between" id="kt_app_header_container">
-		<!--begin::Sidebar mobile toggle-->
-		<div class="d-flex align-items-center d-lg-none ms-n3 me-1 me-md-2" title="Show sidebar menu">
-			<div class="btn btn-icon btn-active-color-primary w-35px h-35px" id="kt_app_sidebar_mobile_toggle">{% getIcon 'abstract-14' 'fs-2 fs-md-1' %}</div>
-		</div>
-		<!--end::Sidebar mobile toggle-->
-		<!--begin::Mobile logo-->
-		<div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
-			<a href="/" class="d-lg-none">
-				<img alt="Logo" src="{% static 'media/logos/default-small.svg' %}" class="h-30px" />
-			</a>
-		</div>
-		<!--end::Mobile logo-->
-		<!--begin::Header wrapper-->
-		<div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1" id="kt_app_header_wrapper">
-			{% include './header/_menu/_menu.html' %}
-			{% include './header/_navbar.html' %}
-		</div>
-		<!--end::Header wrapper-->
-	</div>
-	<!--end::Header container-->
+<div class="container-fluid profileHead p-3">
+  <!--begin::Header container-->
+  <div class="container-fluid d-flex justify-content-between">
+    <!--begin::Titulo de la aplicacion-->
+    <div class="container-fluid d-flex justify-content-between mb-3 gap-3">
+      <a
+        href="#"
+        class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-body-emphasis text-decoration-none brandName"
+        aria-expanded="false"
+      >
+        Agencia Nacional de Aduanas de Mexico
+      </a>
+      <!--end::Titulo de la aplicacion-->
+    </div>
+
+    <div class="d-flex align-items-center align-items-center">
+      <!--begin::Detalles del usuario-->
+      <div class="d-flex m-1 userProfileDetail">
+        <div class="d-flex flex-column align-self-center">
+          <p class="userDetails">
+            <span style="color: #b5b5c3"> Administrador </span> <br />
+            administrador@gmail.com
+          </p>
+        </div>
+
+        <a href="#" class="d-flex m-2 userProfilePic">
+          <img
+            src="https://github.com/mdo.png"
+            alt="mdo"
+            width="42"
+            height="42"
+            class="rounded-circle align-self-center"
+          />
+        </a>
+      </div>
+      <!--end::Detalles del usuario-->
+    </div>
+  </div>
+  <!--end::Header container-->
 </div>
 <!--end::Header-->

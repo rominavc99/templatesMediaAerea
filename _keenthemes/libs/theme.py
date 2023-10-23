@@ -33,6 +33,16 @@ class KTTheme:
         KTTheme.cssFiles = []
         KTTheme.vendorFiles = []
 
+        KTTheme.addJavascriptFile('js/custom/buttons.js')
+        KTTheme.addJavascriptFile('js/custom/collapsible.js')
+        KTTheme.addJavascriptFile('js/custom/formsetFunctions.js')
+        KTTheme.addJavascriptFile('js/custom/formset.js')
+        KTTheme.addJavascriptFile('js/custom/main.js')
+        KTTheme.addJavascriptFile('js/custom/nabvar.js')
+        KTTheme.addJavascriptFile('js/custom/togglefiltro.js')
+        KTTheme.addJavascriptFile('js/custom/widgets.js')
+  
+
 
     # Get product name
     def getName():

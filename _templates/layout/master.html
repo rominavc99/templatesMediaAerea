@@ -25,12 +25,8 @@
         {% endfor %}
         <!--end::Vendor Stylesheets-->
 
-        <!--begin::Custom Stylesheets(optional)-->
-        {% getCustomCss as css %}
-        {% for file in css %}
-        <link href="{% static file %}" rel="stylesheet" type="text/css" />
-        {% endfor %}
-        <!--end::Custom Stylesheets-->
+        
+
 
         <!--begin::Global Stylesheets(mandatory)-->
         {% getGlobalAssets 'css' as assets_css %}
@@ -39,6 +35,14 @@
         {% endfor %}
         <!--end::Global Stylesheets-->
         {% endblock css %}
+
+        <!--begin::Custom Stylesheets(optional)-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" type="text/css" />
+        
+       
+        <!--end::Custom Stylesheets-->
+        
 
         <!--begin::Tracking-->
         <!--end::Tracking-->
@@ -53,28 +57,16 @@
         {% block layout %}
         {% endblock layout %}
 
-        {% block javascript %}
-        <!--begin::Global Javascript(mandatory)-->
-        {% getGlobalAssets 'js' as assets_js %}
-        {% for file in assets_js %}
-            <script src="{% static file %}"></script>
-        {% endfor %}
-        <!--end::Global Javascript-->
+        
 
-        <!--begin::Vendors Javascript(optional)-->
-        {% getVendors 'js' as vendors_js %}
-        {% for file in vendors_js %}
-        <script src="{{ file }}"></script>
-        {% endfor %}
-        <!--end::Vendors Javascript-->
 
-        <!--begin::Custom Javascript(optional)-->
-        {% getCustomJs as js %}
-        {% for file in js %}
-        <script src="{% static file %}"></script>
-        {% endfor %}
-        <!--end::Custom Javascript-->
-        {% endblock javascript %}
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="{% static 'js/custom/navbar.js' %}"></script>
+        <script src="{% static 'js/custom/buttons.js' %}"></script>
+        <script src="{% static 'js/custom/collapsible.js' %}"></script>
+        <script src="{% static 'js/custom/main.js' %}"></script>
+        <script src="{% static 'js/custom/togglefiltro.js' %}"></script>
+
 
     </body>
     <!--end::Body-->
